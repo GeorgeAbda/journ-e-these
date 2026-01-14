@@ -2171,6 +2171,7 @@ let animationRunning = false;
 let flowAnimationRunning = false;
 
 window.startAnimation = function() {
+    console.log('startAnimation called!');
     if (animationRunning) return;
     animationRunning = true;
     
@@ -2237,6 +2238,13 @@ window.startFlowAnimation = function() {
         });
     }, 2000);
 };
+
+// Test that functions are accessible
+console.log('Animation functions loaded:', {
+    startAnimation: typeof window.startAnimation,
+    resetAnimation: typeof window.resetAnimation,
+    startFlowAnimation: typeof window.startFlowAnimation
+});
 </script>
 
             </div>
