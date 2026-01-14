@@ -2164,6 +2164,81 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         <p class="text-xs text-red-700">Dynamic adaptation to changing workloads</p>
                     </div>
                 </div>
+
+<script>
+// Animation functions for Cloud Task Scheduling Architecture slide
+let animationRunning = false;
+let flowAnimationRunning = false;
+
+function startAnimation() {
+    if (animationRunning) return;
+    animationRunning = true;
+    
+    // Animate tasks moving from Task Manager to hosts
+    const tasks = document.querySelectorAll('.task-box');
+    
+    tasks.forEach((task, index) => {
+        setTimeout(() => {
+            task.style.transition = 'all 1s ease';
+            task.style.transform = 'translateY(300px) scale(0.5)';
+            task.style.opacity = '0.3';
+        }, index * 200);
+    });
+    
+    setTimeout(() => {
+        animationRunning = false;
+        tasks.forEach(task => {
+            task.style.transform = '';
+            task.style.opacity = '';
+        });
+    }, 3000);
+}
+
+function resetAnimation() {
+    animationRunning = false;
+    flowAnimationRunning = false;
+    
+    const tasks = document.querySelectorAll('.task-box');
+    const vms = document.querySelectorAll('[class*="vm-box"]');
+    
+    tasks.forEach(task => {
+        task.style.transition = 'none';
+        task.style.transform = '';
+        task.style.opacity = '';
+    });
+    
+    vms.forEach(vm => {
+        vm.style.transition = 'none';
+        vm.style.animation = '';
+    });
+    
+    setTimeout(() => {
+        tasks.forEach(task => task.style.transition = '');
+        vms.forEach(vm => vm.style.transition = '');
+    }, 50);
+}
+
+function startFlowAnimation() {
+    if (flowAnimationRunning) return;
+    flowAnimationRunning = true;
+    
+    const vms = document.querySelectorAll('[class*="vm-box"]');
+    
+    vms.forEach((vm, index) => {
+        setTimeout(() => {
+            vm.style.animation = 'pulse 1s ease-in-out';
+        }, index * 150);
+    });
+    
+    setTimeout(() => {
+        flowAnimationRunning = false;
+        vms.forEach(vm => {
+            vm.style.animation = '';
+        });
+    }, 2000);
+}
+</script>
+
             </div>
         </div>
 
