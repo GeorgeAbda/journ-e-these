@@ -1296,6 +1296,35 @@
     }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes patternMove {
+    0% {
+        background-position: 0 0, 7px 13px;
+    }
+    100% {
+        background-position: 15px 26px, 22px 39px;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .gantt-chart-custom {
