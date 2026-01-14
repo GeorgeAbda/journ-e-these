@@ -1556,7 +1556,7 @@
 
         <!-- Slide Counter -->
         <div class="slide-counter">
-            <span id="currentSlide">1</span> / <span id="totalSlides">25</span>
+            <span id="currentSlide">1</span> / <span id="totalSlides">26</span>
         </div>
         
 <div class="slide active" id="slide-1">
@@ -1574,30 +1574,23 @@
   <!-- Main Content Centered -->
   <div class="flex items-center justify-center h-full">
     <div class="text-center z-10 max-w-4xl px-8 py-10 bg-white bg-opacity-80 rounded-3xl shadow-2xl border border-gray-100 backdrop-blur-md">
-      <!-- Academic Badge -->
-      <div class="academic-badge mb-6">PhD Thesis Defense</div>
-      
       <!-- Title -->
       <h1 class="font-black text-5xl md:text-6xl text-gray-900 mb-8 leading-tight tracking-tight drop-shadow-lg thesis-title">
-        Minimizing the Impact of Digital Activities on Greenhouse Gas Emissions:
+        Journées des thèses DIN
         <br>
-        <span class="red-accent text-4xl md:text-5xl block mt-2">Using AI to Improve the Energy Efficiency of Data Centers</span>
+        <span class="red-accent text-4xl md:text-5xl block mt-2">DIN Thesis Days</span>
       </h1>
       
       <!-- Author -->
       <div class="mb-8 stagger-animation">
         <h2 class="font-bold text-2xl text-gray-900 tracking-wide">Anas HATTAY</h2>
-        <div class="publication-badge mt-4">
-          <i class="fas fa-award mr-2"></i>
-          SIGMETRICS 2026 Publication Ready
         </div>
-      </div>
       
       <!-- Context Box -->
       <div class="bg-gradient-to-r from-red-50 to-slate-50 rounded-xl p-6 border-l-8 border-red-600 mb-8 shadow-md">
         <div class="flex items-center justify-center mb-2">
           <i class="fas fa-calendar-alt red-accent text-xl mr-2"></i>
-          <p class="text-gray-800 font-semibold text-lg">2<sup>nd</sup> Year PhD Committee Meeting</p>
+          <p class="text-gray-800 font-semibold text-lg">Journées des thèses DIN — DIN Thesis Days</p>
         </div>
         <div class="text-sm text-gray-600 italic mb-2">Supervised by:</div>
         <div class="text-base text-gray-700 font-medium space-y-1">
@@ -1676,31 +1669,32 @@
       <a class="menu-btn-card group" href="#slide-5">
         <div class="menu-icon bg-blue-100 text-blue-600"><i class="fas fa-book-open"></i></div>
         <div>
-          <div class="menu-title">Key Concepts</div>
+          <div class="menu-title">Important Concepts</div>
           <div class="menu-desc">Understanding workflows, scheduling, and energy efficiency</div>
         </div>
         <span class="menu-arrow group-hover:translate-x-2"><i class="fas fa-chevron-right"></i></span>
       </a>
 
+
       <!-- Thesis Contribution -->
       <a class="menu-btn-card group" href="#slide-11">
         <div class="menu-icon bg-purple-100 text-purple-600"><i class="fas fa-graduation-cap"></i></div>
         <div>
-          <div class="menu-title">Core Research Contribution</div>
+          <div class="menu-title">Research Contributions</div>
           <div class="menu-desc">DAG structure impact on energy-aware scheduling policies</div>
         </div>
         <span class="menu-arrow group-hover:translate-x-2"><i class="fas fa-chevron-right"></i></span>
       </a>
 
       <!-- Decision Framework -->
-      <a class="menu-btn-card group" href="#slide-12">
+      <!-- <a class="menu-btn-card group" href="#slide-12">
         <div class="menu-icon bg-green-100 text-green-600"><i class="fas fa-brain"></i></div>
         <div>
           <div class="menu-title">Methodology & Results</div>
           <div class="menu-desc">How to approach the research questions</div>
         </div>
         <span class="menu-arrow group-hover:translate-x-2"><i class="fas fa-chevron-right"></i></span>
-      </a>
+      </a> -->
 
       <!-- Results & Impact -->
       <!-- <a class="menu-btn-card group" href="#slide13">
@@ -1716,19 +1710,19 @@
         <div class="menu-icon bg-orange-100 text-orange-600"><i class="fas fa-rocket"></i></div>
         <div>
           <div class="menu-title">Future Horizons</div>
-          <div class="menu-desc">Transfer learning, sim-to-real, and next research steps</div>
+          <div class="menu-desc">Next research steps</div>
         </div>
         <span class="menu-arrow group-hover:translate-x-2"><i class="fas fa-chevron-right"></i></span>
       </a>
       <!-- Academic Achievements -->
-      <a class="menu-btn-card group" href="#slide-21">
+      <!-- <a class="menu-btn-card group" href="#slide-21">
         <div class="menu-icon bg-teal-100 text-teal-600"><i class="fas fa-trophy"></i></div>
         <div>
           <div class="menu-title">Academic Achievements</div>
           <div class="menu-desc">Teaching, courses, and publications</div>
         </div>
         <span class="menu-arrow group-hover:translate-x-2"><i class="fas fa-chevron-right"></i></span>
-      </a> 
+      </a> --> 
      
       <!-- Timeline & Gantt Chart -->
       <!-- <a class="menu-btn-card group" href="#slide22">
@@ -1745,6 +1739,156 @@
 </section>
 
         
+        <!-- Slide: Cloud Resource Allocation Animation -->
+        <div class="slide" id="slide-2a">
+          <div class="geometric-pattern"></div>
+          <div class="p-6 md:p-10 h-full flex flex-col justify-center">
+            <div class="text-center mb-6">
+              <h2 class="font-black text-3xl md:text-4xl text-gray-900">Resource Allocation in the Cloud</h2>
+              <div class="mt-2 text-gray-600">Jobs (left) are allocated to servers (right) based on capacity and load</div>
+            </div>
+            <div class="flex-1 bg-white rounded-xl shadow border border-gray-100 p-2 md:p-4">
+              <svg id="cloudAllocViz" class="w-full h-full" viewBox="0 0 900 450" preserveAspectRatio="xMidYMid meet"></svg>
+            </div>
+            <div class="mt-3 text-center text-sm text-gray-500">D3 animation: dynamic job-to-server allocation</div>
+          </div>
+        </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          if (typeof d3 === 'undefined') return;
+          const svg = d3.select('#cloudAllocViz');
+          if (svg.empty()) return;
+
+          const width = 900, height = 450;
+          const g = svg.append('g');
+
+          const servers = d3.range(4).map((i) => ({
+            x: 700,
+            y: 80 + i * 90,
+            cap: 6,
+            load: 0,
+            id: 'S' + (i+1)
+          }));
+
+          const jobs = d3.range(14).map((i) => ({
+            x: 80,
+            y: 50 + i * 26,
+            id: 'J' + (i+1)
+          }));
+
+          // Draw server boxes
+          const serverG = g.selectAll('.server')
+            .data(servers)
+            .enter()
+            .append('g')
+            .attr('class', 'server')
+            .attr('transform', d => `translate(${d.x},${d.y})`);
+
+          serverG.append('rect')
+            .attr('x', -40).attr('y', -30)
+            .attr('width', 160).attr('height', 60)
+            .attr('rx', 10).attr('ry', 10)
+            .attr('fill', '#f3f4f6')
+            .attr('stroke', '#d1d5db')
+            .attr('stroke-width', 2);
+
+          serverG.append('text')
+            .attr('x', 0).attr('y', -38)
+            .attr('text-anchor', 'middle')
+            .attr('fill', '#374151')
+            .attr('font-size', 12)
+            .text(d => d.id);
+
+          // Capacity bars
+          serverG.append('rect')
+            .attr('class', 'cap-bg')
+            .attr('x', -30).attr('y', 10)
+            .attr('width', 120).attr('height', 8)
+            .attr('rx', 4)
+            .attr('fill', '#e5e7eb');
+
+          serverG.append('rect')
+            .attr('class', 'cap-fill')
+            .attr('x', -30).attr('y', 10)
+            .attr('width', 0).attr('height', 8)
+            .attr('rx', 4)
+            .attr('fill', '#dc2626');
+
+          function updateBars() {
+            serverG.selectAll('.cap-fill')
+              .data(servers)
+              .transition().duration(500)
+              .attr('width', d => 120 * (d.load / d.cap));
+          }
+
+          // Draw jobs
+          const jobNodes = g.selectAll('.job')
+            .data(jobs)
+            .enter()
+            .append('circle')
+            .attr('class', 'job')
+            .attr('r', 8)
+            .attr('cx', d => d.x)
+            .attr('cy', d => d.y)
+            .attr('fill', '#3b82f6')
+            .attr('opacity', 0.9)
+            .attr('stroke', '#ffffff')
+            .attr('stroke-width', 1.5);
+
+          g.append('text')
+            .attr('x', 80).attr('y', 24)
+            .attr('fill', '#374151')
+            .attr('font-weight', 'bold')
+            .text('Jobs');
+
+          g.append('text')
+            .attr('x', 740).attr('y', 24)
+            .attr('fill', '#374151')
+            .attr('font-weight', 'bold')
+            .attr('text-anchor', 'end')
+            .text('Servers');
+
+          function allocate() {
+            jobNodes.each(function(d, i) {
+              // choose server with min load/capacity ratio
+              const target = d3.least(servers, s => s.load / s.cap);
+              const jitterY = (Math.random() - 0.5) * 16;
+              const tx = target.x + 40 - 20 + (target.load % 3) * 14; // slight spread
+              const ty = target.y + jitterY;
+
+              d3.select(this)
+                .transition()
+                .delay(i * 200)
+                .duration(900)
+                .attr('fill', '#10b981')
+                .attr('cx', tx)
+                .attr('cy', ty)
+                .on('start', function() {
+                  target.load = Math.min(target.cap, target.load + 1);
+                  updateBars();
+                });
+            });
+          }
+
+          allocate();
+
+          // Reset and replay on click
+          svg.on('click', function() {
+            servers.forEach(s => s.load = 0);
+            jobNodes
+              .attr('fill', '#3b82f6')
+              .transition().duration(300)
+              .attr('cx', d => d.x)
+              .attr('cy', d => d.y)
+              .on('end', (d, i, nodes) => {
+                if (i === nodes.length - 1) allocate();
+              });
+            updateBars();
+          });
+        });
+        </script>
+
          <!-- Slide: Data Center Electricity Demand vs. Countries (with Flags) -->
         <div class="slide" id="slide-3">
         <div class="geometric-pattern"></div>
@@ -1816,7 +1960,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
 
         // Special icons for data centers and EVs (base64 or emoji fallback)
         const specialIcons = {
-        dc: '⚡',  // Lightning bolt emoji for Data Centers
+        dc: '',  // Lightning bolt emoji for Data Centers
         ev: '🔌'   // Plug emoji for EVs
         };
 
@@ -2179,7 +2323,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                 <!-- Header -->
                 <div class="text-center mb-8">
                     <h1 class="text-4xl font-bold text-gray-900 mb-4">
-                        First Year <span class="red-accent">Foundation</span>
+                        First Year <span class="red-accent">Work</span>
                     </h1>
       
                 </div>
@@ -2307,7 +2451,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         <div class="space-y-3">
                             <div class="bg-gray-50 rounded-lg p-2 border border-gray-200">
                                 <div class="flex items-center">
-                                    <i class="fas fa-lightbulb black-accent mr-2"></i>
+                                    
                                     <span class="text-sm font-semibold text-gray-800">Heuristics</span>
                                 </div>
                                 <p class="text-xs text-gray-600 ml-6">Simple, fast algorithms</p>
@@ -2404,7 +2548,6 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         <h4 class="font-bold">Foundation for Second Year</h4>
                         <i class="fas fa-arrow-right text-yellow-300 text-xl ml-3"></i>
                     </div>
-                    <p class="text-sm mt-2">This comparative analysis revealed the need for intelligent algorithm selection</p>
                 </div>
             </div>
         </div>
@@ -2526,8 +2669,8 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                 <i class="fas fa-arrow-right black-accent text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-gray-900">Linear DAG</h3>
-                                <p class="text-gray-600">Sequential Dependencies</p>
+                                <h3 class="font-bold text-gray-900">Long CP DAG</h3>
+                                <p class="text-gray-600">Long Critical Path</p>
                             </div>
                         </div>
                         
@@ -2567,15 +2710,15 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <i class="fas fa-check-circle text-gray-600 mr-3"></i>
-                                <span class="text-sm text-gray-700">One decision at a time</span>
+                                <span class="text-sm text-gray-700">Long critical path limits throughput</span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-check-circle text-gray-600 mr-3"></i>
-                                <span class="text-sm text-gray-700">No future option locking</span>
+                                <span class="text-sm text-gray-700">Low inherent parallelism</span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-check-circle text-gray-600 mr-3"></i>
-                                <span class="text-sm text-gray-700">Simple energy optimization</span>
+                                <span class="text-sm text-gray-700">Greedy/local choices often acceptable</span>
                             </div>
                         </div>
                         
@@ -2583,10 +2726,10 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         <div class="mt-4 bg-gray-100 rounded-lg p-3">
                             <div class="flex items-center justify-between">
                                 <span class="text-sm font-medium text-gray-800">Complexity</span>
-                                <span class="text-lg font-bold text-gray-600">LOW</span>
+                                <span class="text-lg font-bold text-gray-600">MEDIUM</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2 mt-2">
-                                <div class="bg-gray-600 h-2 rounded-full" style="width: 25%"></div>
+                                <div class="bg-gray-600 h-2 rounded-full" style="width: 55%"></div>
                             </div>
                         </div>
                     </div>
@@ -2598,8 +2741,8 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                 <i class="fas fa-project-diagram red-accent text-xl"></i>
                             </div>
                             <div>
-                                <h3 class="font-bold text-gray-900">Non-Linear DAG</h3>
-                                <p class="text-gray-600">Complex Dependencies</p>
+                                <h3 class="font-bold text-gray-900">Wide DAG</h3>
+                                <p class="text-gray-600">High Parallelism</p>
                             </div>
                         </div>
                         
@@ -2648,11 +2791,11 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         <div class="space-y-3">
                             <div class="flex items-center">
                                 <i class="fas fa-exclamation-triangle red-accent mr-3"></i>
-                                <span class="text-sm text-gray-700">Multiple parallel paths</span>
+                                <span class="text-sm text-gray-700">Multiple parallel branches</span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-exclamation-triangle red-accent mr-3"></i>
-                                <span class="text-sm text-gray-700">Resource blocking effects</span>
+                                <span class="text-sm text-gray-700">Resource contention and blocking</span>
                             </div>
                             <div class="flex items-center">
                                 <i class="fas fa-exclamation-triangle red-accent mr-3"></i>
@@ -2700,9 +2843,8 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
             <div class="p-12 h-full flex flex-col justify-center">
                 <div class="text-center mb-8">
                     <h1 class="text-5xl font-black text-gray-900 mb-4">
-                        What is a <span class="red-accent">Workflow</span>?
+                        How Do We Model a <span class="red-accent">Workflow</span>?
                     </h1>
-                    <p class="text-2xl text-gray-600 font-light">Understanding the Foundation of Cloud Computing</p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-8 mb-8">
@@ -2760,27 +2902,18 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 border border-yellow-200">
-                    <h3 class="text-lg font-bold text-orange-800 mb-2">
-                        <i class="fas fa-lightbulb mr-2"></i>Why This Matters
-                    </h3>
-                    <p class="text-gray-700">
-                        Modern applications like AI training, data analytics, and scientific computing are all workflows. 
-                        Understanding their structure is key to efficient scheduling and energy optimization.
-                    </p>
-                </div>
+                
             </div>
         </div>
 
         <!-- Slide 6: What is Cloud Scheduling? -->
-        <div class="slide" id="slide-7">
+        <div class="slide" id="slide-cloud-scheduling">
             <div class="geometric-pattern"></div>
             <div class="p-8 h-full flex flex-col justify-center">
                 <div class="text-center mb-8">
                     <h1 class="text-4xl font-black text-gray-900 mb-4">
                         What is <span class="red-accent">Cloud Scheduling</span>?
                     </h1>
-                    <p class="text-xl text-gray-600">Deciding which task runs where and when</p>
                 </div>
 
                 <div class="grid grid-cols-3 gap-6 mb-8">
@@ -2820,7 +2953,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                 <div class="text-sm space-y-1">
                                     <div>🤔 Which VM should run it?</div>
                                     <div>⏰ When should it start?</div>
-                                    <div>⚡ How much energy will it use?</div>
+                                    <div> How much energy will it use?</div>
                                 </div>
                             </div>
                         </div>
@@ -2865,99 +2998,75 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
         </div>
 
         <!-- Slide 7: Why Energy Matters -->
-        <div class="slide" id="slide-8">
+        <div class="slide" id="slide-approx">
             <div class="geometric-pattern"></div>
             <div class="p-8 h-full flex flex-col justify-center">
                 <div class="text-center mb-8">
-                    <h1 class="text-4xl font-black text-gray-900 mb-4">
-                        Why <span class="red-accent">Energy</span> Matters in Cloud Computing
+                    <h1 class="text-4xl font-black text-gray-900 mb-2">
+                        <span class="red-accent">Literature Review</span>
                     </h1>
-                    <p class="text-xl text-gray-600">The hidden cost of digital transformation</p>
+                    <p class="text-lg text-gray-600">Task Scheduling Algorithms</p>
                 </div>
-
-                <div class="grid grid-cols-2 gap-8 mb-8">
-                    <!-- Environmental Impact -->
-                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border-l-4 border-green-600">
-                        <h3 class="text-xl font-bold mb-4 text-green-800">
-                            <i class="fas fa-globe-americas mr-3"></i>Environmental Impact
-                        </h3>
-                        <div class="space-y-4">
-                            <div class="bg-white p-4 rounded-lg shadow-sm">
-                                <div class="text-2xl font-bold text-red-600 mb-1">4%</div>
-                                <div class="text-sm text-gray-600">of global CO₂ emissions from data centers</div>
-                            </div>
-                            <div class="bg-white p-4 rounded-lg shadow-sm">
-                                <div class="text-2xl font-bold text-orange-600 mb-1">200 TWh</div>
-                                <div class="text-sm text-gray-600">annual energy consumption worldwide</div>
-                            </div>
-                            <p class="text-sm text-gray-700">
-                                <i class="fas fa-exclamation-circle text-yellow-500 mr-2"></i>
-                                Growing 10-15% per year with AI boom
-                            </p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Exact Methods (impractical at cloud scale) -->
+                    <div class="bg-gray-50 rounded-xl p-6 border-l-4 border-gray-400">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800 text-center">Exact Methods</h3>
+                        <ul class="space-y-3 text-gray-800 list-disc ml-5">
+                            <li>Integer Linear Programming (ILP)</li>
+                            <li>Dynamic Programming</li>
+                        </ul>
+                        <div class="mt-4 text-sm text-gray-600">
+                            Provably optimal but <span class="font-semibold text-red-600">impossible/impractical</span> at cloud scale (NP-hard, huge state space, tight deadlines).
                         </div>
                     </div>
+                    <!-- Heuristics -->
+                    <div class="bg-red-50 rounded-xl p-6 border-l-4 border-red-600">
+                        <h3 class="text-xl font-bold mb-4 text-red-800 text-center">Heuristics</h3>
+                        <ul class="space-y-3 text-gray-800 list-disc ml-5">
+                            <li>Min-Min Algorithm</li>
+                            <li>FCFS Algorithm</li>
+                            <li>Tetris</li>
+                            <li>Modified Best Fit Decreasing (MBFD)</li>
+                            <li>Round Robin Algorithm</li>
+                        </ul>
+                    </div>
 
-                    <!-- Economic Impact -->
-                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-l-4 border-blue-600">
-                        <h3 class="text-xl font-bold mb-4 text-blue-800">
-                            <i class="fas fa-dollar-sign mr-3"></i>Economic Impact
-                        </h3>
-                        <div class="space-y-4">
-                            <div class="bg-white p-4 rounded-lg shadow-sm">
-                                <div class="text-2xl font-bold text-green-600 mb-1">30-50%</div>
-                                <div class="text-sm text-gray-600">of data center operational costs</div>
-                            </div>
-                            <div class="bg-white p-4 rounded-lg shadow-sm">
-                                <div class="text-2xl font-bold text-purple-600 mb-1">$13B</div>
-                                <div class="text-sm text-gray-600">annual energy costs for hyperscale providers</div>
-                            </div>
-                            <p class="text-sm text-gray-700">
-                                <i class="fas fa-chart-line text-blue-500 mr-2"></i>
-                                Small efficiency gains = huge savings
-                            </p>
-                        </div>
+                    <!-- Meta-heuristics -->
+                    <div class="bg-pink-50 rounded-xl p-6 border-l-4 border-pink-400">
+                        <h3 class="text-xl font-bold mb-4 text-pink-800 text-center">Meta-heuristics</h3>
+                        <ul class="space-y-3 text-gray-800 list-disc ml-5">
+                            <li>Evolutionary Algorithms (e.g., Genetic Algorithm)</li>
+                            <li>Swarm Intelligence Algorithms (e.g., PSO, ACO)</li>
+                            <li>Physics-based Algorithms (e.g., SA)</li>
+                            <li>Bio-inspired Algorithms (e.g., IWO)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Artificial Intelligence -->
+                    <div class="bg-rose-50 rounded-xl p-6 border-l-4 border-rose-400">
+                        <h3 class="text-xl font-bold mb-4 text-rose-800 text-center">Artificial Intelligence</h3>
+                        <ul class="space-y-3 text-gray-800 list-disc ml-5">
+                            <li>Deep Learning</li>
+                            <li>Reinforcement Learning (RL) / Deep RL</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-3 gap-4 mb-6">
-                    <div class="text-center p-4 bg-white rounded-lg shadow border-l-4 border-red-500">
-                        <i class="fas fa-fire text-red-500 text-2xl mb-2"></i>
-                        <div class="font-semibold">Heat Generation</div>
-                        <div class="text-sm text-gray-600">Cooling costs double energy use</div>
-                    </div>
-                    <div class="text-center p-4 bg-white rounded-lg shadow border-l-4 border-yellow-500">
-                        <i class="fas fa-battery-quarter text-yellow-500 text-2xl mb-2"></i>
-                        <div class="font-semibold">Peak Demand</div>
-                        <div class="text-sm text-gray-600">Grid strain during high usage</div>
-                    </div>
-                    <div class="text-center p-4 bg-white rounded-lg shadow border-l-4 border-green-500">
-                        <i class="fas fa-leaf text-green-500 text-2xl mb-2"></i>
-                        <div class="font-semibold">Sustainability</div>
-                        <div class="text-sm text-gray-600">Corporate carbon goals</div>
-                    </div>
-                </div>
-
-                <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-lg p-6 border border-red-200">
-                    <h3 class="text-lg font-bold text-red-800 mb-3">
-                        <i class="fas fa-lightbulb mr-2"></i>The Opportunity
-                    </h3>
-                    <p class="text-gray-700 text-center text-lg">
-                        <strong>Smart scheduling can reduce energy consumption by 15-30%</strong> without sacrificing performance. 
-                        This means millions in savings and significant environmental impact reduction.
-                    </p>
+                <div class="text-center text-xs text-gray-500 mt-6 italic">
+                    Table: Classification of Task Scheduling Methods in Cloud Environment.
                 </div>
             </div>
         </div>
 
         <!-- Slide 8: What are Graph Neural Networks? -->
-        <div class="slide" id="slide-9">
+        <div class="slide" id="slide-8">
             <div class="geometric-pattern"></div>
             <div class="p-8 h-full flex flex-col justify-center">
                 <div class="text-center mb-8">
                     <h1 class="text-4xl font-black text-gray-900 mb-4">
                         What are <span class="red-accent">Graph Neural Networks</span>?
                     </h1>
-                    <p class="text-xl text-gray-600">AI that understands relationships and structure</p>
+                    <p class="text-xl text-gray-600"></p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-8 mb-8">
@@ -3048,17 +3157,17 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
         </div>
 
         <!-- Slide 9: What is Deep Reinforcement Learning? -->
-        <div class="slide" id="slide-10">
+        <div class="slide" id="slide-7">
             <div class="geometric-pattern"></div>
             <div class="p-8 h-full flex flex-col justify-center">
                 <div class="text-center mb-8">
                     <h1 class="text-4xl font-black text-gray-900 mb-4">
                         What is <span class="red-accent">Deep Reinforcement Learning</span>?
                     </h1>
-                    <p class="text-xl text-gray-600">AI that learns by trial and error, like a human</p>
+                    
                 </div>
 
-                <div class="grid grid-cols-2 gap-8 mb-8">
+                <div class="grid grid-cols-1 gap-8 mb-8">
                     <!-- The Learning Process -->
                     <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border-l-4 border-green-600">
                         <h3 class="text-xl font-bold mb-4 text-green-800">
@@ -3070,7 +3179,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                             <div class="bg-white p-4 rounded-lg shadow-sm">
                                 <div class="flex items-center justify-between">
                                     <div class="text-center">
-                                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mb-2">🤖</div>
+                                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mb-2"></div>
                                         <span class="text-sm font-semibold">Agent</span>
                                     </div>
                                     <div class="flex flex-col items-center">
@@ -3099,7 +3208,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                     </div>
 
                     <!-- Scheduling Example -->
-                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-l-4 border-blue-600">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-l-4 border-blue-600 hidden">
                         <h3 class="text-xl font-bold mb-4 text-blue-800">
                             <i class="fas fa-tasks mr-3"></i>For Scheduling
                         </h3>
@@ -3147,30 +3256,73 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 border border-yellow-200">
-                    <h3 class="text-lg font-bold text-orange-800 mb-3">
-                        <i class="fas fa-rocket mr-2"></i>Why Deep RL for Cloud Scheduling?
-                    </h3>
-                    <p class="text-gray-700 text-center">
-                        Traditional schedulers use fixed rules. <strong>Deep RL learns optimal strategies</strong> by trying millions of scheduling decisions, 
-                        discovering patterns that humans might miss. It adapts to different workflow types and hardware configurations automatically.
-                    </p>
-                </div>
-            </div>
+                
         </div>
         
       
                 
-        <!-- Core Research Contribution Slides -->
+        
+        <!-- Slide: MDP Formulation for Scheduling -->
+        <div class="slide" id="slide-mdp">
+            <div class="geometric-pattern"></div>
+            <div class="p-8 h-full flex flex-col justify-center">
+                <div class="text-center mb-8">
+                    <h1 class="text-4xl font-black text-gray-900 mb-4">
+                        Markov Decision Process <span class="red-accent">(MDP)</span> Formulation
+                    </h1>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-600">
+                        <h3 class="text-xl font-bold mb-3 text-blue-700"><i class="fas fa-layer-group mr-2"></i>State (s)</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li>Ready tasks, DAG dependencies</li>
+                            <li>VM statuses (CPU, Mem, Energy)</li>
+                            <li>Queue lengths, time, DVFS state</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-600">
+                        <h3 class="text-xl font-bold mb-3 text-green-700"><i class="fas fa-hand-pointer mr-2"></i>Action (a)</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li>Assign task i → VM j</li>
+                            <li>Optionally set DVFS level</li>
+                            <li>Defer when no feasible mapping</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-600">
+                        <h3 class="text-xl font-bold mb-3 text-red-700"><i class="fas fa-trophy mr-2"></i>Reward (r)</h3>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li>− Energy per step (Wh)</li>
+                            <li>− Makespan penalty</li>
+                            <li>Constraints: deadline violations</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-slate-50 to-gray-50 rounded-xl p-6 border-l-4 border-gray-400">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800"><i class="fas fa-random mr-2"></i>Transition (P)</h3>
+                        <p class="text-sm text-gray-700">P(s'|s,a) evolves by simulator; stochastic job times.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-slate-50 to-gray-50 rounded-xl p-6 border-l-4 border-gray-400">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800"><i class="fas fa-brain mr-2"></i>Policy (π)</h3>
+                        <p class="text-sm text-gray-700">π(a|s) selects VM and DVFS to optimize energy–makespan.</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-slate-50 to-gray-50 rounded-xl p-6 border-l-4 border-gray-400">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800"><i class="fas fa-bullseye mr-2"></i>Objective</h3>
+                        <p class="text-sm text-gray-700">Maximize E[∑ γ^t r_t] subject to SLA/deadline constraints.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Core Research Contribution Slides -->
         <!-- Slide: Research Overview -->
         <div class="slide" id="slide-11">
             <div class="geometric-pattern"></div>
             <div class="p-12 h-full flex flex-col justify-center">
                 <div class="text-center mb-8">
                     <h1 class="text-5xl font-black text-gray-900 mb-4">
-                        Core <span class="red-accent">Research</span> Contribution
+                        <span class="red-accent">Research</span> Contribution
                     </h1>
-                    <p class="text-2xl text-gray-600 font-light">Understanding DAG Structure Impact on Scheduling Policies</p>
                 </div>
                 
                 <div class="bg-gradient-to-r from-red-50 to-slate-50 rounded-xl p-8 border-l-8 border-red-600 mb-8 shadow-lg">
@@ -3188,22 +3340,42 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-8">
-                    <div class="question-card p-6 bg-white rounded-lg shadow-md border-l-4 border-blue-500">
-                        <h3 class="text-xl font-bold mb-3 text-blue-700">Research Approach</h3>
-                        <ul class="space-y-2 text-gray-700">
-                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>GNN-based Deep RL schedulers</li>
-                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Controlled DAG structure analysis</li>
-                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i>Cross-domain generalization study</li>
-                        </ul>
-                    </div>
-                    <div class="question-card p-6 bg-white rounded-lg shadow-md border-l-4 border-green-500">
-                        <h3 class="text-xl font-bold mb-3 text-green-700">Thesis Contribution</h3>
-                        <ul class="space-y-2 text-gray-700">
-                            <li><i class="fas fa-lightbulb text-yellow-500 mr-2"></i>Structure-policy relationship insights</li>
-                            <li><i class="fas fa-lightbulb text-yellow-500 mr-2"></i>Regime-dependent performance patterns</li>
-                            <li><i class="fas fa-lightbulb text-yellow-500 mr-2"></i>Production deployment framework</li>
-                        </ul>
+                <!-- Research Approach - Modern Card Design -->
+                <div class="max-w-5xl mx-auto">
+                    <h3 class="text-3xl font-bold mb-6 text-center text-gray-900">Research Approach</h3>
+                    <div class="grid grid-cols-3 gap-6">
+                        <!-- Card 1: GNN-based Deep RL -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition-shadow">
+                            <div class="flex flex-col items-center text-center">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-brain text-blue-600 text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-2">GNN-based Deep RL</h4>
+                                <p class="text-sm text-gray-600">Graph Neural Networks with Deep Reinforcement Learning schedulers</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: DAG Structure Analysis -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-purple-500 hover:shadow-xl transition-shadow">
+                            <div class="flex flex-col items-center text-center">
+                                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-project-diagram text-purple-600 text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-2">Controlled DAG Analysis</h4>
+                                <p class="text-sm text-gray-600">Systematic study of workflow structure impact</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Cross-domain Generalization -->
+                        <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-green-500 hover:shadow-xl transition-shadow">
+                            <div class="flex flex-col items-center text-center">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fas fa-sync-alt text-green-600 text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-2">Cross-domain Study</h4>
+                                <p class="text-sm text-gray-600">Generalization capabilities across workflow types</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -3218,15 +3390,6 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         Research Problem: <span class="red-accent">Structure</span> vs <span class="red-accent">Policy</span>
                     </h1>
                     <p class="text-xl text-gray-600">Why do learned schedulers behave differently across workflow types?</p>
-                </div>
-
-                <!-- Research Question Box -->
-                <div class="research-question mb-8">
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Central Research Question</h3>
-                    <p class="text-lg text-gray-700 italic">
-                        "How does workflow structure fundamentally influence the learning and generalization 
-                        capabilities of deep reinforcement learning agents in energy-aware cloud scheduling?"
-                    </p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-8 mb-8">
@@ -3530,7 +3693,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                     <line x1="178" y1="65" x2="208" y2="50" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead-side)" opacity="0.7"/>
                                     
                                     <!-- Sequential flow indicator -->
-                                    <text x="160" y="85" text-anchor="middle" class="text-xs fill-red-600 font-semibold">Sequential Dependencies</text>
+                                    <text x="160" y="85" text-anchor="middle" class="text-xs fill-red-600 font-semibold">Long Critical Path</text>
                                 </svg>
                                 <div class="mt-3 flex items-center justify-between">
                                     <p class="text-xs text-gray-600">
@@ -3565,21 +3728,21 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                         <div class="w-8 h-6 bg-blue-500 rounded border-2 border-blue-600 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM1</span>
                                         </div>
-                                        <div class="text-xs mt-1">⚡ 10W</div>
+                                        <div class="text-xs mt-1"> 10W</div>
                                     </div>
                                     <div class="text-center">
                                         <div class="w-8 h-6 bg-blue-500 rounded border-2 border-blue-600 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM2</span>
                                         </div>
-                                        <div class="text-xs mt-1">⚡ 15W</div>
+                                        <div class="text-xs mt-1"> 15W</div>
                                     </div>
                                     <div class="text-center">
                                         <div class="w-8 h-6 bg-blue-500 rounded border-2 border-blue-600 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM3</span>
                                         </div>
-                                        <div class="text-xs mt-1">⚡ 20W</div>
+                                        <div class="text-xs mt-1"> 20W</div>
                                     </div>
-                                    <div class="text-xs text-gray-600 ml-2">🏃 Same Speed</div>
+                                    <div class="text-xs text-gray-600 ml-2"> Same Speed</div>
                                 </div>
                             </div>
                             
@@ -3594,21 +3757,21 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                         <div class="w-8 h-6 bg-green-400 rounded border-2 border-green-500 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM1</span>
                                         </div>
-                                        <div class="text-xs mt-1">🏃 1x</div>
+                                        <div class="text-xs mt-1"> 1x</div>
                                     </div>
                                     <div class="text-center">
                                         <div class="w-8 h-6 bg-green-500 rounded border-2 border-green-600 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM2</span>
                                         </div>
-                                        <div class="text-xs mt-1">🏃 2x</div>
+                                        <div class="text-xs mt-1"> 2x</div>
                                     </div>
                                     <div class="text-center">
                                         <div class="w-8 h-6 bg-green-600 rounded border-2 border-green-700 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM3</span>
                                         </div>
-                                        <div class="text-xs mt-1">🏃 3x</div>
+                                        <div class="text-xs mt-1"> 3x</div>
                                     </div>
-                                    <div class="text-xs text-gray-600 ml-2">⚡ Same Power</div>
+                                    <div class="text-xs text-gray-600 ml-2"> Same Power</div>
                                 </div>
                             </div>
                             
@@ -3623,21 +3786,21 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                         <div class="w-8 h-6 bg-purple-400 rounded border-2 border-purple-500 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM1</span>
                                         </div>
-                                        <div class="text-xs mt-1">🏃1x ⚡10W</div>
+                                        <div class="text-xs mt-1">1x 10W</div>
                                     </div>
                                     <div class="text-center">
                                         <div class="w-8 h-6 bg-purple-500 rounded border-2 border-purple-600 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM2</span>
                                         </div>
-                                        <div class="text-xs mt-1">🏃2x ⚡20W</div>
+                                        <div class="text-xs mt-1">2x 20W</div>
                                     </div>
                                     <div class="text-center">
                                         <div class="w-8 h-6 bg-purple-600 rounded border-2 border-purple-700 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM3</span>
                                         </div>
-                                        <div class="text-xs mt-1">🏃3x ⚡30W</div>
+                                        <div class="text-xs mt-1">3x 30W</div>
                                     </div>
-                                    <div class="text-xs text-gray-600 ml-2">📈 Correlated</div>
+                                    <div class="text-xs text-gray-600 ml-2">Correlated</div>
                                 </div>
                             </div>
                             
@@ -3652,47 +3815,40 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                         <div class="w-8 h-6 bg-red-400 rounded border-2 border-red-500 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM1</span>
                                         </div>
-                                        <div class="text-xs mt-1">🏃1x ⚡30W</div>
+                                        <div class="text-xs mt-1">1x 30W</div>
                                     </div>
                                     <div class="text-center">
                                         <div class="w-8 h-6 bg-red-500 rounded border-2 border-red-600 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM2</span>
                                         </div>
-                                        <div class="text-xs mt-1">🏃2x ⚡20W</div>
+                                        <div class="text-xs mt-1">2x 20W</div>
                                     </div>
                                     <div class="text-center">
                                         <div class="w-8 h-6 bg-red-600 rounded border-2 border-red-700 flex items-center justify-center">
                                             <span class="text-xs text-white font-bold">VM3</span>
                                         </div>
-                                        <div class="text-xs mt-1">🏃3x ⚡10W</div>
+                                        <div class="text-xs mt-1">3x 10W</div>
                                     </div>
-                                    <div class="text-xs text-gray-600 ml-2">⚖️ Conflicting</div>
+                                    <div class="text-xs text-gray-600 ml-2"> Conflicting</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 border border-yellow-200">
-                    <h3 class="text-lg font-bold text-orange-800 mb-2">
-                        <i class="fas fa-question-circle mr-2"></i>Thesis Research Questions
-                    </h3>
-                    <div class="grid grid-cols-2 gap-4 text-gray-700">
-                        <div><strong>RQ1:</strong> How do DAG structure and host configs jointly influence learned scheduling priorities?</div>
-                        <div><strong>RQ2:</strong> When do structure-specialized policies generalize across different workflow types?</div>
-                    </div>
+                
                 </div>
 
                 <!-- Structure Importance Analogy -->
                 <div class="mt-8 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-6 border border-blue-200 shadow-lg">
                     <h3 class="text-xl font-bold text-blue-800 mb-6 text-center">
-                        <i class="fas fa-lightbulb mr-2"></i>Why Structure Matters: Real-World Analogy
+                        Why Structure Matters
                     </h3>
                     
                     <div class="grid grid-cols-2 gap-8 mb-6">
                         <!-- Assembly Line Analogy -->
                         <div class="bg-white p-6 rounded-lg shadow-md border">
-                            <h4 class="font-bold text-gray-800 mb-4 text-center">🏭 Assembly Line (Sequential)</h4>
+                            <h4 class="font-bold text-gray-800 mb-4 text-center">Assembly Line (Sequential)</h4>
                             <div class="space-y-4">
                                 <svg width="100%" height="120" viewBox="0 0 300 120">
                                     <!-- Assembly line visualization -->
@@ -3717,25 +3873,25 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                     <circle cx="60" cy="40" r="12" fill="#3b82f6" stroke="#2563eb" stroke-width="2">
                                         <animate attributeName="r" values="12;14;12" dur="3s" repeatCount="indefinite"/>
                                     </circle>
-                                    <text x="60" y="45" text-anchor="middle" class="text-xs font-bold fill-white">👷</text>
+                                    <text x="60" y="45" text-anchor="middle" class="text-xs font-bold fill-white"></text>
                                     <text x="60" y="30" text-anchor="middle" class="text-xs fill-gray-600">Cut</text>
                                     
                                     <circle cx="120" cy="40" r="12" fill="#3b82f6" stroke="#2563eb" stroke-width="2">
                                         <animate attributeName="r" values="12;14;12" dur="3s" begin="1s" repeatCount="indefinite"/>
                                     </circle>
-                                    <text x="120" y="45" text-anchor="middle" class="text-xs font-bold fill-white">🔧</text>
+                                    <text x="120" y="45" text-anchor="middle" class="text-xs font-bold fill-white"></text>
                                     <text x="120" y="30" text-anchor="middle" class="text-xs fill-gray-600">Assemble</text>
                                     
                                     <circle cx="180" cy="40" r="12" fill="#3b82f6" stroke="#2563eb" stroke-width="2">
                                         <animate attributeName="r" values="12;14;12" dur="3s" begin="2s" repeatCount="indefinite"/>
                                     </circle>
-                                    <text x="180" y="45" text-anchor="middle" class="text-xs font-bold fill-white">🎨</text>
+                                    <text x="180" y="45" text-anchor="middle" class="text-xs font-bold fill-white"></text>
                                     <text x="180" y="30" text-anchor="middle" class="text-xs fill-gray-600">Paint</text>
                                     
                                     <circle cx="240" cy="40" r="12" fill="#3b82f6" stroke="#2563eb" stroke-width="2">
                                         <animate attributeName="r" values="12;14;12" dur="3s" begin="3s" repeatCount="indefinite"/>
                                     </circle>
-                                    <text x="240" y="45" text-anchor="middle" class="text-xs font-bold fill-white">📦</text>
+                                    <text x="240" y="45" text-anchor="middle" class="text-xs font-bold fill-white"></text>
                                     <text x="240" y="30" text-anchor="middle" class="text-xs fill-gray-600">Pack</text>
                                     
                                     <!-- Product flow -->
@@ -3744,7 +3900,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                     </rect>
                                     
                                     <!-- Bottleneck indicator -->
-                                    <text x="150" y="90" text-anchor="middle" class="text-sm fill-red-600 font-bold">⚠️ Bottleneck = Slowest Step</text>
+                                    <text x="150" y="90" text-anchor="middle" class="text-sm fill-red-600 font-bold"> Bottleneck = Slowest Step</text>
                                     <text x="150" y="105" text-anchor="middle" class="text-xs fill-gray-600">Speed limited by critical path</text>
                                 </svg>
                                 <div class="text-center bg-red-50 p-3 rounded">
@@ -3756,7 +3912,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         
                         <!-- Restaurant Kitchen Analogy -->
                         <div class="bg-white p-6 rounded-lg shadow-md border">
-                            <h4 class="font-bold text-gray-800 mb-4 text-center">🍽️ Restaurant Kitchen (Parallel)</h4>
+                            <h4 class="font-bold text-gray-800 mb-4 text-center">Restaurant Kitchen (Parallel)</h4>
                             <div class="space-y-4">
                                 <svg width="100%" height="120" viewBox="0 0 300 120">
                                     <!-- Kitchen layout -->
@@ -3766,25 +3922,25 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                     <circle cx="70" cy="40" r="15" fill="#10b981" stroke="#059669" stroke-width="2">
                                         <animate attributeName="r" values="15;18;15" dur="2s" repeatCount="indefinite"/>
                                     </circle>
-                                    <text x="70" y="45" text-anchor="middle" class="text-sm font-bold fill-white">🥗</text>
+                                    <text x="70" y="45" text-anchor="middle" class="text-sm font-bold fill-white"></text>
                                     <text x="70" y="25" text-anchor="middle" class="text-xs fill-gray-600">Salads</text>
                                     
                                     <circle cx="130" cy="40" r="15" fill="#10b981" stroke="#059669" stroke-width="2">
                                         <animate attributeName="r" values="15;18;15" dur="2s" begin="0.3s" repeatCount="indefinite"/>
                                     </circle>
-                                    <text x="130" y="45" text-anchor="middle" class="text-sm font-bold fill-white">🍖</text>
+                                    <text x="130" y="45" text-anchor="middle" class="text-sm font-bold fill-white"></text>
                                     <text x="130" y="25" text-anchor="middle" class="text-xs fill-gray-600">Grill</text>
                                     
                                     <circle cx="190" cy="40" r="15" fill="#10b981" stroke="#059669" stroke-width="2">
                                         <animate attributeName="r" values="15;18;15" dur="2s" begin="0.6s" repeatCount="indefinite"/>
                                     </circle>
-                                    <text x="190" y="45" text-anchor="middle" class="text-sm font-bold fill-white">🍝</text>
+                                    <text x="190" y="45" text-anchor="middle" class="text-sm font-bold fill-white"></text>
                                     <text x="190" y="25" text-anchor="middle" class="text-xs fill-gray-600">Pasta</text>
                                     
                                     <circle cx="250" cy="40" r="15" fill="#10b981" stroke="#059669" stroke-width="2">
                                         <animate attributeName="r" values="15;18;15" dur="2s" begin="0.9s" repeatCount="indefinite"/>
                                     </circle>
-                                    <text x="250" y="45" text-anchor="middle" class="text-sm font-bold fill-white">🧁</text>
+                                    <text x="250" y="45" text-anchor="middle" class="text-sm font-bold fill-white"></text>
                                     <text x="250" y="25" text-anchor="middle" class="text-xs fill-gray-600">Desserts</text>
                                     
                                     <!-- Parallel work indicators -->
@@ -3802,7 +3958,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                     </circle>
                                     
                                     <!-- Energy efficiency indicator -->
-                                    <text x="150" y="90" text-anchor="middle" class="text-sm fill-green-600 font-bold">⚡ Load Balancing</text>
+                                    <text x="150" y="90" text-anchor="middle" class="text-sm fill-green-600 font-bold"> Load Balancing</text>
                                     <text x="150" y="105" text-anchor="middle" class="text-xs fill-gray-600">Distribute work efficiently</text>
                                 </svg>
                                 <div class="text-center bg-green-50 p-3 rounded">
@@ -3813,68 +3969,14 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         </div>
                     </div>
                     
-                    <!-- The Connection -->
-                    <div class="bg-gradient-to-r from-yellow-100 to-orange-100 p-6 rounded-xl shadow-md border border-yellow-200">
-                        <h4 class="text-lg font-bold text-center mb-4">
-                            <i class="fas fa-link mr-2"></i>The Connection to AI Scheduling
-                        </h4>
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="text-center">
-                                <div class="text-2xl mb-2">🏭 ➜ 🤖</div>
-                                <p class="text-sm"><strong>Sequential Workflows</strong> train AI to think like an <strong>assembly line manager</strong></p>
-                                <p class="text-xs text-gray-600 mt-2">AI learns: "Find and fix the bottleneck!"</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl mb-2">🍽️ ➜ 🤖</div>
-                                <p class="text-sm"><strong>Parallel Workflows</strong> train AI to think like a <strong>kitchen manager</strong></p>
-                                <p class="text-xs text-gray-600 mt-2">AI learns: "Balance the workload efficiently!"</p>
-                            </div>
-                        </div>
-                        <div class="mt-4 text-center bg-white p-3 rounded-lg">
-                            <p class="text-base font-semibold text-gray-800">
-                                🧠 <strong>Same AI, Different Training → Different Management Style!</strong>
-                            </p>
-                        </div>
                     </div>
-                    
-                    <!-- Additional Analogy: Traffic Management -->
-                    <div class="mt-6 bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl shadow-md border border-purple-200">
-                        <h4 class="text-lg font-bold text-center mb-4">
-                            <i class="fas fa-traffic-light mr-2"></i>Another Way to Think About It: Traffic Management
-                        </h4>
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="text-center bg-white p-4 rounded-lg shadow-sm">
-                                <div class="text-3xl mb-2">🛣️</div>
-                                <h5 class="font-semibold text-gray-800 mb-2">Highway Traffic Controller</h5>
-                                <p class="text-sm text-gray-600 mb-3">Manages a single busy highway with bottlenecks</p>
-                                <div class="bg-red-50 p-2 rounded">
-                                    <p class="text-xs text-red-700"><strong>Learns:</strong> "Clear the bottleneck fast!"</p>
-                                    <p class="text-xs text-gray-600">Priority: Speed up slowest section</p>
-                                </div>
-                            </div>
-                            <div class="text-center bg-white p-4 rounded-lg shadow-sm">
-                                <div class="text-3xl mb-2">🏙️</div>
-                                <h5 class="font-semibold text-gray-800 mb-2">City Traffic Controller</h5>
-                                <p class="text-sm text-gray-600 mb-3">Manages multiple parallel routes and intersections</p>
-                                <div class="bg-green-50 p-2 rounded">
-                                    <p class="text-xs text-green-700"><strong>Learns:</strong> "Balance traffic flow!"</p>
-                                    <p class="text-xs text-gray-600">Priority: Distribute load evenly</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-4 text-center">
-                            <div class="inline-flex items-center bg-white px-4 py-2 rounded-full shadow-sm">
-                                <i class="fas fa-exclamation-triangle text-amber-500 mr-2"></i>
-                                <span class="text-sm font-semibold text-gray-800">
-                                    You wouldn't use highway strategies to manage city traffic!
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+
+                </div>
+                </div>
                 </div>
 
                 <!-- Policy Learning Illustration -->
-                <div class="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-200 shadow-lg">
+                <div class="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 border border-indigo-200 shadow-lg hidden">
                     <h3 class="text-xl font-bold text-indigo-800 mb-6 text-center">
                         <i class="fas fa-brain mr-2"></i>From Analogy to Technical Reality
                     </h3>
@@ -3962,9 +4064,9 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                                     <!-- Explanation with icons -->
                                     <text x="120" y="110" text-anchor="middle" class="text-sm fill-gray-700 font-semibold">Policy Behavior:</text>
                                     <text x="120" y="125" text-anchor="middle" class="text-xs fill-gray-700">
-                                        <tspan x="120" dy="0">⚡ Prefers energy-efficient VMs</tspan>
+                                        <tspan x="120" dy="0"> Prefers energy-efficient VMs</tspan>
                                         <tspan x="120" dy="12">🔄 Exploits parallelism</tspan>
-                                        <tspan x="120" dy="12">⚖️ Balances load across resources</tspan>
+                                        <tspan x="120" dy="12"> Balances load across resources</tspan>
                                     </text>
                                 </svg>
                             </div>
@@ -4068,7 +4170,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                     <div class="mt-6 text-center">
                         <div class="bg-gradient-to-r from-yellow-100 to-orange-100 p-4 rounded-xl shadow-md border border-yellow-200">
                             <div class="flex items-center justify-center mb-2">
-                                <i class="fas fa-lightbulb text-yellow-600 text-xl mr-3"></i>
+                                
                                 <span class="text-lg font-bold text-gray-800">Core Research Insight</span>
                             </div>
                             <p class="text-gray-700 text-base">
@@ -4523,13 +4625,12 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                     <h1 class="text-4xl font-black text-gray-900 mb-4 thesis-title">
                         Research <span class="red-accent">Findings</span>
                     </h1>
-                    <p class="text-xl text-gray-600">Structure fundamentally shapes learned scheduling behavior</p>
                 </div>
 
                 <!-- Key Discovery Box -->
                 <div class="innovation-highlight mb-6">
                     <h3 class="text-xl font-bold text-purple-800 mb-3">
-                        <i class="fas fa-lightbulb mr-2"></i>Key Discovery
+                        Results
                     </h3>
                     <p class="text-lg text-gray-700">
                         <strong>Training distribution determines policy bias:</strong> LongCP training creates time-focused policies, 
@@ -4606,20 +4707,6 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         </div>
                     </div>
                 </div>
-
-                <div class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg p-6 border border-purple-200">
-                    <h3 class="text-lg font-bold text-purple-800 mb-3">
-                        <i class="fas fa-key mr-2"></i>Key Insight: Structure Shapes Policy Bias
-                    </h3>
-                    <div class="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                            <strong class="text-green-700">Wide specialist:</strong> Learns parallelism exploitation → energy-first bias in NA regime
-                        </div>
-                        <div>
-                            <strong class="text-blue-700">LongCP specialist:</strong> Learns critical path focus → time-first bias in NA regime
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -4679,15 +4766,15 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         </h3>
                         <ul class="space-y-3 text-gray-700">
                             <li class="flex items-start">
-                                <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-1"></i>
+                                
                                 <span><strong>Specialist selection:</strong> Choose based on workload type and hardware regime</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-1"></i>
+                                
                                 <span><strong>Training strategy:</strong> Match training distribution to deployment domain</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-lightbulb text-yellow-500 mr-2 mt-1"></i>
+                                
                                 <span><strong>Performance prediction:</strong> Understand when transfer will succeed/fail</span>
                             </li>
                         </ul>
@@ -4713,12 +4800,10 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                     </div>
                     <div class="text-center p-4 bg-white rounded-lg shadow">
                         <i class="fas fa-award text-yellow-500 text-2xl mb-2"></i>
-                        <div class="font-semibold">SIGMETRICS 2026</div>
                         <div class="text-sm text-gray-600">Publication Ready</div>
                     </div>
                     <div class="text-center p-4 bg-white rounded-lg shadow">
                         <i class="fas fa-industry text-green-500 text-2xl mb-2"></i>
-                        <div class="font-semibold">Industry Impact</div>
                         <div class="text-sm text-gray-600">Real-world Applications</div>
                     </div>
                 </div>
@@ -4848,28 +4933,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                 </div>
 
                 <!-- Key Findings -->
-                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6 border border-yellow-200">
-                    <h3 class="text-lg font-bold text-orange-800 mb-3">
-                        <i class="fas fa-chart-bar mr-2"></i>Key Performance Insights
-                    </h3>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div>
-                            <h4 class="font-semibold text-green-700 mb-2">Wide Specialist Advantages:</h4>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• <strong>92% efficiency</strong> in NA regime (energy-time conflict)</li>
-                                <li>• Superior load balancing across parallel resources</li>
-                                <li>• Robust performance when objectives conflict</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-blue-700 mb-2">LongCP Specialist Advantages:</h4>
-                            <ul class="text-sm text-gray-700 space-y-1">
-                                <li>• <strong>98% efficiency</strong> in AL regime (aligned objectives)</li>
-                                <li>• Excellent critical path optimization</li>
-                                <li>• Peak performance when speed correlates with power</li>
-                            </ul>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </div>
@@ -5102,7 +5166,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                             </div>
                         </div>
                         <div class="text-center">
-                            <div class="text-2xl mb-2">⚖️</div>
+                            <div class="text-2xl mb-2"></div>
                             <h4 class="font-semibold text-gray-800">Resource Strategy</h4>
                             <div class="text-sm text-gray-600 mt-2">
                                 <div><strong>Wide:</strong> Load balancing</div>
@@ -5340,7 +5404,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                     <div class="bg-white rounded-xl p-4 shadow-lg border-l-4 border-red-600">
                         <div class="flex items-center mb-3">
                             <div class="solution-highlight rounded-full p-2 mr-3">
-                                <i class="fas fa-lightbulb text-lg"></i>
+                                
                             </div>
                             <div>
                                 <h3 class="font-bold text-gray-900">Context Solution</h3>
@@ -5712,7 +5776,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
 
         
 <!-- Slide 16: Results Impact - Enhanced with Research Findings -->
-<div class="slide" id="slide-20">
+<div class="slide" id="slide-20a">
     <div class="geometric-pattern"></div>
     
     <div class="p-4 md:p-8 h-full flex flex-col justify-evenly">
@@ -5803,7 +5867,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         <span class="text-sm text-gray-700">DRL requires 10-100x more computation</span>
                     </div>
                     <div class="flex items-center">
-                        <i class="fas fa-lightbulb red-accent mr-2"></i>
+                        
                         <span class="text-sm text-gray-700">Heuristics preferred when sufficient</span>
                     </div>
                     
@@ -5933,7 +5997,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                         <p class="text-gray-700">✓ <strong>Energy Performance:</strong> perfectly matched that of a local energy-aware heuristic</p>
                         <p class="text-gray-700">✓ <strong>Generalization of DeepRL Agent:</strong> strong generalization, achieving optimal values</p>
                         <p class="text-gray-700">✓ <strong>Cross-Configuration:</strong> shared understanding of what makes a good scheduling choice for linear dag and non-linear non-bottelneck dag</p>
-                        <p class="text-gray-700">⚠️ <strong>Inference Cost:</strong> 10-100 much cheaper in terms of inference cost for heuristics</p>
+                        <p class="text-gray-700"> <strong>Inference Cost:</strong> 10-100 much cheaper in terms of inference cost for heuristics</p>
                     </div>
                 </div> -->
                                 <!-- Next Steps -->
@@ -5979,6 +6043,100 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
             </div>
         </div>
 
+
+<section class="slide" id="slide-20">
+  <div class="p-16 h-full flex flex-col bg-gradient-to-br from-slate-50 to-white">
+    <!-- Header Section -->
+    <div class="text-center mb-12">
+      <h1 class="text-6xl font-black text-gray-900 mb-6 tracking-tight">
+        References
+      </h1>
+      <div class="w-32 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+    </div>
+    
+    <!-- References Content -->
+    <div class="flex-1 overflow-y-auto">
+      <div class="max-w-6xl mx-auto">
+        <ol class="space-y-6 text-lg leading-relaxed">
+          <li class="flex items-start group hover:bg-blue-50 p-4 rounded-lg transition-all duration-200">
+            <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">1</span>
+            <div class="text-gray-800">
+              <strong>Hattay, A., Mboula, F. N., Gascard, E., & Yahouni, Z.</strong> (2024). "Evaluating energy-aware cloud task scheduling techniques: A comprehensive dialectical approach." <em>In: UCC 2024 - The 17th IEEE/ACM International Conference on Utility and Cloud Computing.</em>
+            </div>
+          </li>
+          
+          <li class="flex items-start group hover:bg-blue-50 p-4 rounded-lg transition-all duration-200">
+            <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">2</span>
+            <div class="text-gray-800">
+              <strong>Sutton, R. S., Barto, A. G., et al.</strong> (1998). "Reinforcement learning: An introduction, vol. 1." <em>MIT Press Cambridge.</em>
+            </div>
+          </li>
+          
+          <li class="flex items-start group hover:bg-blue-50 p-4 rounded-lg transition-all duration-200">
+            <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">3</span>
+            <div class="text-gray-800">
+              <strong>Li, F., & Hu, B.</strong> (2019). "Deepjs: Job scheduling based on deep reinforcement learning in cloud data center." <em>In: Proceedings of the 4th International Conference on Big Data and Computing.</em>
+            </div>
+          </li>
+          
+          <li class="flex items-start group hover:bg-blue-50 p-4 rounded-lg transition-all duration-200">
+            <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">4</span>
+            <div class="text-gray-800">
+              <strong>Chen, W., Xu, Y., & Wu, X.</strong> (2017). "Deep Reinforcement Learning for Multi-Resource Multi-Machine Job Scheduling." <em>arXiv preprint arXiv:171107440.</em>
+            </div>
+          </li>
+          
+          <li class="flex items-start group hover:bg-blue-50 p-4 rounded-lg transition-all duration-200">
+            <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">5</span>
+            <div class="text-gray-800">
+              <strong>Wang, Y., & Yang, X.</strong> (2025). "Research on Edge Computing and Cloud Collaborative Resource Scheduling Optimization Based on Deep Reinforcement Learning." <em>arXiv preprint arXiv:250218773.</em>
+            </div>
+          </li>
+          
+          <li class="flex items-start group hover:bg-blue-50 p-4 rounded-lg transition-all duration-200">
+            <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">6</span>
+            <div class="text-gray-800">
+              <strong>Sun, Z., Han, W., Gao, L., Zhu, C., & Lyu, Q.</strong> (2025). "Dynamic job shop scheduling under multiple order disturbances using deep reinforcement learning." <em>PMC (Frontiers in Genetics).</em>
+            </div>
+          </li>
+          
+          <li class="flex items-start group hover:bg-blue-50 p-4 rounded-lg transition-all duration-200">
+            <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">7</span>
+            <div class="text-gray-800">
+              <strong>Kaelbling, L. P., Littman, M. L., & Cassandra, A. R.</strong> (1998). "Planning and acting in partially observable stochastic domains." <em>Artificial Intelligence, 101(1-2), 99–134.</em>
+            </div>
+          </li>
+          
+          <li class="flex items-start group hover:bg-blue-50 p-4 rounded-lg transition-all duration-200">
+            <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">8</span>
+            <div class="text-gray-800">
+              <strong>Chrisman, L.</strong> (1992). "Reinforcement learning with perceptual aliasing: The perceptual distinctions approach." <em>In: AAAI, vol. 1992; 183–188.</em>
+            </div>
+          </li>
+          
+          <li class="flex items-start group hover:bg-blue-50 p-4 rounded-lg transition-all duration-200">
+            <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">9</span>
+            <div class="text-gray-800">
+              <strong>Bellman, R.</strong> (1958). "Dynamic programming and stochastic control processes." <em>Information and Control, 1(3), 228–239.</em>
+            </div>
+          </li>
+          
+          <li class="flex items-start group hover:bg-blue-50 p-4 rounded-lg transition-all duration-200">
+            <span class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4 mt-1">10</span>
+            <div class="text-gray-800">
+              <strong>Bogmans, C., Ganpurev, G., Gomez-Gonzalez, P., Melina, G., Pescatori, A., & Thube, S.</strong> (2025). "Power Hungry: How AI Will Drive Energy Demand." <em>IMF Working Paper WP/25/81. International Monetary Fund, Washington DC.</em>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    
+    <!-- Footer Accent -->
+    <div class="mt-8 text-center">
+      <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-blue-600 mx-auto rounded-full"></div>
+    </div>
+  </div>
+</section>
 
 <!-- Slide 22: Academic Achievements - Enhanced -->
 <div class="slide" id="slide-18">
@@ -6031,7 +6189,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
                 <!-- Impact Statement -->
                 <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
                     <div class="flex items-center">
-                        <i class="fas fa-lightbulb text-blue-600 mr-2" aria-hidden="true"></i>
+                        
                         <p class="text-sm text-gray-700 font-medium">Discovered passion for teaching and knowledge transfer</p>
                     </div>
                 </div>
@@ -6561,108 +6719,175 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
 
 <section class="slide" id="slide-24" aria-label="Pyramid of Complexity in Resource Allocation">
   <div class="geometric-pattern"></div>
-  <div class="flex flex-col items-center justify-center h-full p-12 bg-gradient-to-br from-slate-50 to-white">
-    <!-- Academic Header -->
-    <div class="text-center mb-8">
-      <div class="academic-badge mb-4">PhD Thesis Defense</div>
-      <h1 class="text-6xl font-black text-gray-900 mb-6 leading-tight thesis-title">
-        Anas <span class="red-accent">HATTAY</span>
+  <div class="flex flex-col h-full p-6 bg-gradient-to-br from-slate-50 to-white">
+    <!-- Header -->
+    <div class="text-center mb-4">
+      <h1 class="text-4xl font-black text-gray-900 leading-tight">
+        <span class="red-accent">Pyramid of Complexity</span> in Cloud Scheduling
       </h1>
-      <div class="stagger-animation">
-        <p class="text-2xl text-gray-600 font-light mb-4">PhD Candidate in Computer Science</p>
-        <p class="text-lg text-gray-500 mb-2">Université de Technologie de Compiègne</p>
-        <div class="publication-badge mt-4">
-          <i class="fas fa-award mr-2"></i>
-          SIGMETRICS 2026 Publication Ready
-        </div>
-      </div>
     </div>
 
-    <!-- Content -->
-    <div class="flex-1 flex items-center justify-center">
-      <!-- Pyramid SVG - Made bigger and centered -->
-      <div class="w-full flex justify-center">
+    <!-- Main Content: Pyramid + Descriptions -->
+    <div class="flex-1 flex items-center justify-center gap-8 max-w-7xl mx-auto w-full">
+      <!-- Left: Pyramid SVG -->
+      <div class="flex-shrink-0" style="width: 45%;">
         <svg
           id="pyramid-svg"
-          viewBox="0 0 600 420"
-          class="w-full max-w-4xl h-auto"
+          viewBox="0 0 600 520"
+          class="w-full h-auto drop-shadow-lg"
           role="img"
-          aria-labelledby="pyramidTitle pyramidDesc"
+          aria-labelledby="pyramidTitle"
         >
           <title id="pyramidTitle">Complexity Pyramid</title>
-          <desc id="pyramidDesc">Five interactive layers from base to apex representing increasing scheduling complexity.</desc>
 
-          <!-- Base grid/ground for subtle context -->
+          <!-- Pyramid layers (base to apex) with improved spacing -->
+          <!-- L1: Heterogeneous Machines (Base) -->
+          <g class="py-layer">
+            <polygon points="40,440 560,440 520,500 80,500" class="seg seg-0"></polygon>
+            <text x="300" y="475" class="seg-label">Heterogeneous Machines</text>
+            <text x="300" y="492" class="seg-sublabel">& Multi-Resource</text>
+          </g>
+
+          <!-- L2: DAG Structure -->
+          <g class="py-layer">
+            <polygon points="90,350 510,350 470,440 130,440" class="seg seg-1"></polygon>
+            <text x="300" y="390" class="seg-label">DAG Structure</text>
+            <text x="300" y="407" class="seg-sublabel">Linear vs Non-linear</text>
+          </g>
+
+          <!-- L3: Bottlenecks -->
+          <g class="py-layer">
+            <polygon points="140,260 460,260 430,350 170,350" class="seg seg-2"></polygon>
+            <text x="300" y="300" class="seg-label">Bottlenecks</text>
+            <text x="300" y="317" class="seg-sublabel">Demand vs Capacity</text>
+          </g>
+
+          <!-- L4: Critical Path -->
+          <g class="py-layer">
+            <polygon points="190,170 410,170 385,260 215,260" class="seg seg-3"></polygon>
+            <text x="300" y="210" class="seg-label">Critical Path</text>
+            <text x="300" y="227" class="seg-sublabel">vs Parallelism</text>
+          </g>
+
+          <!-- L5: Energy-Makespan (Apex) -->
+          <g class="py-layer">
+            <polygon points="250,60 350,60 335,170 265,170" class="seg seg-4"></polygon>
+            <text x="300" y="105" class="seg-label">Energy-Makespan</text>
+            <text x="300" y="122" class="seg-sublabel">Trade-offs</text>
+          </g>
+
+          <!-- Complexity arrow with gradient -->
           <defs>
-            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e5e7eb" stroke-width="0.5" />
-            </pattern>
+            <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 12 3.5, 0 7" fill="#dc2626" />
+            </marker>
+            <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+            </linearGradient>
           </defs>
-          <rect x="0" y="0" width="600" height="420" fill="url(#grid)" opacity="0.25" style="pointer-events: none;"></rect>
-
-          <!-- Pyramid layers (base to apex). Each is focusable and clickable. -->
-          <!-- L1: Heterogeneous Machines & Multi-Resource (Base) -->
-          <g class="py-layer">
-            <polygon points="60,360 540,360 500,400 100,400" class="seg seg-0"></polygon>
-            <text x="300" y="385" class="seg-label">Heterogeneous Machines &amp; Multi-Resource</text>
-          </g>
-
-          <!-- L2: DAG Structure: Linear vs Non-linear -->
-          <g class="py-layer">
-            <polygon points="100,300 500,300 460,360 140,360" class="seg seg-1"></polygon>
-            <text x="300" y="330" class="seg-label">DAG Structure: Linear vs Non-linear</text>
-          </g>
-
-          <!-- L3: Bottlenecks: Demand vs Capacity -->
-          <g class="py-layer">
-            <polygon points="140,240 460,240 430,300 170,300" class="seg seg-2"></polygon>
-            <text x="300" y="270" class="seg-label">Bottlenecks: Demand vs Capacity</text>
-          </g>
-
-          <!-- L4: Graph Shape: Critical Path vs Parallelism -->
-          <g class="py-layer">
-            <polygon points="170,180 430,180 405,240 195,240" class="seg seg-3"></polygon>
-            <text x="300" y="210" class="seg-label">Graph Shape: Critical Path vs Parallelism</text>
-          </g>
-
-          <!-- L5: Energy–Makespan Trade-offs (Apex) -->
-          <g class="py-layer">
-            <polygon points="250,90 350,90 335,180 265,180" class="seg seg-4"></polygon>
-            <text x="300" y="125" class="seg-label">Energy–Makespan Trade-offs</text>
-          </g>
+          <line x1="20" y1="470" x2="20" y2="100" stroke="url(#arrowGradient)" stroke-width="4" marker-end="url(#arrowhead)" />
+          <text x="12" y="285" class="complexity-label" transform="rotate(-90 12 285)">Increasing Complexity</text>
         </svg>
+      </div>
+
+      <!-- Right: Layer Descriptions with icons -->
+      <div class="flex-shrink-0 space-y-2.5" style="width: 50%;">
+        <!-- Layer 5 -->
+        <div class="bg-gradient-to-r from-red-50 to-red-100 rounded-lg p-3.5 border-l-4 border-red-500 shadow-sm">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-3">5</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-900 mb-1">Energy-Makespan Trade-offs</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">Balancing power consumption vs. execution time. Conflicting objectives requiring Pareto-optimal solutions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layer 4 -->
+        <div class="bg-gradient-to-r from-fuchsia-50 to-fuchsia-100 rounded-lg p-3.5 border-l-4 border-fuchsia-500 shadow-sm">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-8 h-8 bg-fuchsia-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-3">4</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-900 mb-1">Critical Path vs Parallelism</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">Longest task sequence determines minimum makespan; prioritize critical tasks while exploiting parallelism.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layer 3 -->
+        <div class="bg-gradient-to-r from-violet-50 to-violet-100 rounded-lg p-3.5 border-l-4 border-violet-500 shadow-sm">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-8 h-8 bg-violet-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-3">3</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-900 mb-1">Bottlenecks: Demand vs Capacity</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">Resource contention when demand spikes exceed capacity limits (CPU, memory, bandwidth).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layer 2 -->
+        <div class="bg-gradient-to-r from-indigo-50 to-indigo-100 rounded-lg p-3.5 border-l-4 border-indigo-500 shadow-sm">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-8 h-8 bg-indigo-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-3">2</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-900 mb-1">DAG Structure: Linear vs Non-linear</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">Task dependencies define execution order. Linear chains are simpler; complex DAGs have parallel branches and joins.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layer 1 -->
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-3.5 border-l-4 border-blue-500 shadow-sm">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-sm mr-3">1</div>
+            <div>
+              <h3 class="text-base font-bold text-gray-900 mb-1">Heterogeneous Machines & Multi-Resource</h3>
+              <p class="text-xs text-gray-700 leading-relaxed">Foundation: Different CPU speeds, memory, and architectures; tasks require multiple resources simultaneously.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Local styles, scoped to this slide only -->
+  <!-- Enhanced styles -->
   <style>
-    /* Scope to this slide */
     #slide-24 .seg-label {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 17px;
+      font-weight: 800;
       text-anchor: middle;
-      fill: #1e293b; /* slate-800 - darker for better visibility */
+      fill: #ffffff;
       pointer-events: none;
       user-select: none;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+    #slide-24 .seg-sublabel {
+      font-size: 13px;
+      font-weight: 600;
+      text-anchor: middle;
+      fill: #ffffff;
+      pointer-events: none;
+      user-select: none;
+      opacity: 0.95;
+    }
+    #slide-24 .complexity-label {
+      font-size: 15px;
+      font-weight: 700;
+      fill: #dc2626;
+      text-anchor: middle;
+      letter-spacing: 0.5px;
     }
     #slide-24 .seg {
-      stroke: #64748b; /* slate-500 - softer stroke */
-      stroke-width: 2;
-      transition: all 0.3s ease;
+      stroke: #1e293b;
+      stroke-width: 2.5;
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.15));
     }
-    /* Harmonious, pastel palette (base to apex) */
-    #slide-24 .seg-0 { fill: #bfdbfe; } /* blue-200 */
-    #slide-24 .seg-1 { fill: #c7d2fe; } /* indigo-200 */
-    #slide-24 .seg-2 { fill: #ddd6fe; } /* violet-200 */
-    #slide-24 .seg-3 { fill: #f5d0fe; } /* fuchsia-200 */
-    #slide-24 .seg-4 { fill: #fecaca; } /* red-200 */
-
-    /* Subtle hover effects for pastel aesthetic */
-    #slide-24 .seg:hover {
-      filter: brightness(1.05) saturate(1.1);
-      transform: scale(1.01);
-    }
+    #slide-24 .seg-0 { fill: #3b82f6; } /* blue-500 */
+    #slide-24 .seg-1 { fill: #6366f1; } /* indigo-500 */
+    #slide-24 .seg-2 { fill: #8b5cf6; } /* violet-500 */
+    #slide-24 .seg-3 { fill: #d946ef; } /* fuchsia-500 */
+    #slide-24 .seg-4 { fill: #ef4444; } /* red-500 */
   </style>
 
 </section>
@@ -7234,23 +7459,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h1 class="text-5xl font-black text-gray-900 mb-4 thesis-title">
                     <span class="red-accent">Conclusion</span> & Future Work
                 </h1>
-                <p class="text-xl text-gray-600">Advancing the frontier of energy-aware cloud scheduling</p>
             </div>
 
             <!-- Key Contributions Summary -->
             <div class="results-showcase mb-8">
                 <h3 class="text-2xl font-bold text-green-800 mb-6 text-center">
-                    <i class="fas fa-trophy mr-2"></i>Key Contributions
+                    <i class="fas fa-trophy mr-2"></i>Contributions
                 </h3>
                 <div class="grid grid-cols-2 gap-8">
                     <div class="contribution-card">
                         <h4 class="text-lg font-bold text-gray-900 mb-3">
-                            <i class="fas fa-microscope text-blue-500 mr-2"></i>Theoretical Insights
+                            <i class="fas fa-microscope text-blue-500 mr-2"></i>Theoretical Results
                         </h4>
                         <ul class="space-y-2 text-gray-700">
                             <li>• Structure-policy relationship quantified</li>
                             <li>• Cross-structure generalization patterns</li>
-                            <li>• Policy bias visualization techniques</li>
                         </ul>
                     </div>
                     <div class="contribution-card">
@@ -7258,7 +7481,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             <i class="fas fa-cogs text-green-500 mr-2"></i>Practical Impact
                         </h4>
                         <ul class="space-y-2 text-gray-700">
-                            <li>• 15-30% energy reduction potential</li>
                             <li>• Production-ready framework</li>
                             <li>• SIGMETRICS 2026 publication</li>
                         </ul>
@@ -7274,20 +7496,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="grid grid-cols-3 gap-6">
                     <div class="timeline-item">
                         <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
-                            <h4 class="font-bold text-blue-700 mb-2">Multi-Objective Optimization</h4>
-                            <p class="text-sm text-gray-600">Extend to cost, latency, and carbon footprint objectives</p>
+                            <h4 class="font-bold text-blue-700 mb-2">Resource Bottleneck Regimes</h4>
+                            <p class="text-sm text-gray-600">Extend analysis to memory, CPU capacity-constrained environments</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-purple-600">
-                            <h4 class="font-bold text-purple-700 mb-2">Dynamic Adaptation</h4>
-                            <p class="text-sm text-gray-600">Real-time policy switching based on workload characteristics</p>
+                            <h4 class="font-bold text-purple-700 mb-2">Hybrid Approaches</h4>
+                            <p class="text-sm text-gray-600">Combining traditional methods with learned approaches for better structure adaptation</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-green-600">
-                            <h4 class="font-bold text-green-700 mb-2">Federated Learning</h4>
-                            <p class="text-sm text-gray-600">Collaborative training across distributed data centers</p>
+                            <h4 class="font-bold text-green-700 mb-2">Unsupervised Objectives Conflicts Detection</h4>
+                            <p class="text-sm text-gray-600">Unsupervised objectives conflicts detection in multiobjective deep RL</p>
                         </div>
                     </div>
                 </div>
@@ -7295,10 +7517,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <!-- Final Message -->
             <div class="theorem-box mt-8">
-                <p class="text-xl text-center text-gray-800 font-medium italic">
-                    "By understanding how structure shapes learning, we can design more efficient, 
-                    sustainable, and intelligent cloud computing systems for the future."
-                </p>
                 <div class="text-center mt-4">
                     <div class="academic-badge">Thank you for your attention</div>
                 </div>
@@ -7308,7 +7526,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         
 <div class="navigation">
-    <!-- Slide buttons 1-20 -->
+    <!-- Slide buttons 1-18 -->
     <button class="nav-btn active" onclick="goToSlide(1)">1</button>
     <button class="nav-btn" onclick="goToSlide(2)">2</button>
     <button class="nav-btn" onclick="goToSlide(3)">3</button>
@@ -7327,12 +7545,6 @@ document.addEventListener('DOMContentLoaded', function() {
     <button class="nav-btn" onclick="goToSlide(16)">16</button>
     <button class="nav-btn" onclick="goToSlide(17)">17</button>
     <button class="nav-btn" onclick="goToSlide(18)">18</button>
-    <button class="nav-btn" onclick="goToSlide(19)">19</button>
-    <button class="nav-btn" onclick="goToSlide(20)">20</button>
-    <button class="nav-btn" onclick="goToSlide(21)">21</button>
-  <button class="nav-btn" onclick="goToSlide(22)">22</button>
-  <button class="nav-btn" onclick="goToSlide(23)">23</button>
-  <button class="nav-btn" onclick="goToSlide(24)">24</button>
 
   <!-- Navigation controls -->
     <button class="nav-btn" onclick="previousSlide()">
@@ -7350,9 +7562,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Define pedagogic order (by slide IDs). Only these will be navigable.
         const pedagogicOrderIds = [
-            'slide-1','slide-2','slide-8','slide-3','slide-5','slide-7','slide-11','slide-12',
-            'slide-13a','slide-13b','slide-13c','slide-13','slide-14','slide-14a','slide-14b','slide-14c',
-            'slide-14d','slide-14e','slide-14f','slide-15','slide-19','slide-18','slide-conclusion'
+            'slide-1','slide-2','slide-3','slide-4','slide-approx','slide-7','slide-13a','slide-6','slide-8','slide-13b','slide-10','slide-12','slide-14f','slide-14e','slide-14d','slide-14','slide-conclusion','slide-20'
         ];
         
         // Speaker notes for each slide
@@ -7464,6 +7674,13 @@ document.addEventListener('DOMContentLoaded', function() {
             pedagogicOrderIds.forEach((id, idx) => {
                 const el = document.getElementById(id);
                 if (el) el.dataset.order = String(idx + 1);
+            });
+            // Append any remaining slides not listed above, preserving DOM order
+            let nextIndex = pedagogicOrderIds.length + 1;
+            document.querySelectorAll('.slide').forEach(slide => {
+                if (!slide.dataset.order) {
+                    slide.dataset.order = String(nextIndex++);
+                }
             });
             rebuildNavigation();
             setActiveSlideByIndex(1);
