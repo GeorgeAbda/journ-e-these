@@ -2249,6 +2249,39 @@ console.log('Animation functions loaded:', {
     resetAnimation: typeof window.resetAnimation,
     startFlowAnimation: typeof window.startFlowAnimation
 });
+
+// Add event listeners (works better with GitHub Pages CSP)
+document.addEventListener('DOMContentLoaded', function() {
+    var startBtn = document.getElementById('startAnimationBtn');
+    var resetBtn = document.getElementById('resetAnimationBtn');
+    var flowBtn = document.getElementById('flowAnimationBtn');
+    
+    if (startBtn) {
+        startBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Start button clicked via event listener');
+            window.startAnimation();
+        });
+    }
+    
+    if (resetBtn) {
+        resetBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Reset button clicked via event listener');
+            window.resetAnimation();
+        });
+    }
+    
+    if (flowBtn) {
+        flowBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Flow button clicked via event listener');
+            window.startFlowAnimation();
+        });
+    }
+    
+    console.log('Event listeners attached:', { startBtn: !!startBtn, resetBtn: !!resetBtn, flowBtn: !!flowBtn });
+});
 </script>
 
             </div>
