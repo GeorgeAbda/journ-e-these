@@ -2170,7 +2170,7 @@ How can we use AI responsibly and effectively to reduce the energy consumption o
 let animationRunning = false;
 let flowAnimationRunning = false;
 
-function startAnimation() {
+window.startAnimation = function() {
     if (animationRunning) return;
     animationRunning = true;
     
@@ -2194,7 +2194,7 @@ function startAnimation() {
     }, 3000);
 }
 
-function resetAnimation() {
+window.resetAnimation = function() {
     animationRunning = false;
     flowAnimationRunning = false;
     
@@ -2218,7 +2218,7 @@ function resetAnimation() {
     }, 50);
 }
 
-function startFlowAnimation() {
+window.startFlowAnimation = function() {
     if (flowAnimationRunning) return;
     flowAnimationRunning = true;
     
@@ -2236,7 +2236,7 @@ function startFlowAnimation() {
             vm.style.animation = '';
         });
     }, 2000);
-}
+};
 </script>
 
             </div>
