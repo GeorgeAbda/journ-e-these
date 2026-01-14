@@ -188,6 +188,7 @@
             background-position: 0 0, 7px 13px;
             opacity: 0.1;
             animation: patternMove 20s linear infinite;
+            pointer-events: none;
         }
         
 
@@ -864,7 +865,8 @@
             right: 1rem;
             display: flex;
             gap: 8px;
-            z-index: 100;
+            z-index: 9999;
+            pointer-events: auto !important;
             background: rgba(255, 255, 255, 0.95);
             padding: 10px;
             border-radius: 12px;
@@ -874,7 +876,8 @@
 
         body.fullscreen .slide-3-animation-controls {
             background: rgba(0, 0, 0, 0.8);
-            z-index: 1100;
+            z-index: 99999;
+            pointer-events: auto !important;
         }
 
         .slide-3-control-btn {
